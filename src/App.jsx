@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Home from './components/Home.jsx'
 import Biblioteca from './components/Biblioteca.jsx'
+import Estudio from './components/Estudio.jsx'
 import Referencias from './components/Referencias.jsx'
 import Projetor from './components/Projetor.jsx'
 import Simulador from './components/Simulador.jsx'
@@ -8,6 +9,7 @@ import Simulador from './components/Simulador.jsx'
 const TABS = [
   { id: 'home',       icon: '🌿', label: 'Início'     },
   { id: 'biblioteca', icon: '🖼',  label: 'Riscos'     },
+  { id: 'estudio',    icon: '✏️',  label: 'Estúdio'    },
   { id: 'referencias',icon: '📸',  label: 'Fotos'      },
   { id: 'projetor',   icon: '📱',  label: 'Projetor'   },
   { id: 'simulador',  icon: '🎨',  label: 'Parede'     },
@@ -30,11 +32,18 @@ export default function App() {
     setTab('projetor')
   }
 
+  function goToProjetorCustom(customRisco) {
+    setSelectedRef(customRisco)
+    setSelectedRisco(null)
+    setTab('projetor')
+  }
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <main style={{ flex: 1, overflow: 'hidden' }}>
         {tab === 'home'        && <Home onNavigate={setTab} />}
         {tab === 'biblioteca'  && <Biblioteca onSelectRisco={goToProjetor} />}
+        {tab === 'estudio'     && <Estudio onUseInProjetor={goToProjetorCustom} />}
         {tab === 'referencias' && <Referencias onSelectRef={goToProjetorRef} />}
         {tab === 'projetor'    && <Projetor risco={selectedRisco} referencia={selectedRef} />}
         {tab === 'simulador'   && <Simulador />}

@@ -1,6 +1,7 @@
 export default function Home({ onNavigate }) {
   const cards = [
     { id:'biblioteca', emoji:'🖼',  title:'Biblioteca de Riscos',    desc:'65 riscos botânicos vetoriais prontos para projetar', cor:'#1D9E75' },
+    { id:'estudio',    emoji:'✏️',  title:'Estúdio de Riscos',       desc:'Crie riscos com espelho radial e desenho livre',      cor:'#993556' },
     { id:'referencias', emoji:'📸', title:'Fotos de Referência',     desc:'Fotos reais de flores e folhas para guiar seu risco', cor:'#185FA5' },
     { id:'projetor',   emoji:'📱',  title:'Projetor Virtual',        desc:'Projete qualquer risco na parede pelo celular',       cor:'#534AB7' },
     { id:'simulador',  emoji:'🎨',  title:'Simulador de Parede',     desc:'Teste cores, texturas e calcule tinta antes de pintar', cor:'#B45309' },
