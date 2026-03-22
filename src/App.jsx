@@ -5,6 +5,7 @@ import Estudio from './components/Estudio.jsx'
 import Referencias from './components/Referencias.jsx'
 import Projetor from './components/Projetor.jsx'
 import Simulador from './components/Simulador.jsx'
+import InstallPrompt from './components/InstallPrompt.jsx'
 
 const TABS = [
   { id: 'home',       icon: '🌿', label: 'Início'     },
@@ -48,6 +49,8 @@ export default function App() {
         {tab === 'projetor'    && <Projetor risco={selectedRisco} referencia={selectedRef} />}
         {tab === 'simulador'   && <Simulador />}
       </main>
+
+      <InstallPrompt />
 
       <nav style={{
         display: 'flex', borderTop: '0.5px solid rgba(93,202,165,0.2)',
