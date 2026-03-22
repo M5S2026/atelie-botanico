@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+<g stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M200 400 Q198 350 200 290 Q202 230 198 160 Q196 110 200 60"/>
+<path d="M200 370 Q175 348 156 345"/>
+<path d="M200 340 Q225 318 244 315"/>
+<path d="M200 308 Q172 286 153 283"/>
+<path d="M200 276 Q228 254 247 251"/>
+<path d="M200 244 Q174 222 156 219"/>
+<path d="M200 212 Q226 190 244 187"/>
+<path d="M200 180 Q176 158 160 155"/>
+<path d="M200 148 Q224 128 240 125"/>
+<path d="M200 116 Q178 97 165 94"/>
+<path d="M156 345 Q142 340 140 328 Q150 322 158 330"/>
+<path d="M244 315 Q258 310 260 298 Q250 292 242 300"/>
+<path d="M153 283 Q139 278 137 266 Q147 260 155 268"/>
+<path d="M247 251 Q261 246 263 234 Q253 228 245 236"/>
+<ellipse cx="178" cy="330" rx="5" ry="8" transform="rotate(-30 178 330)"/>
+<ellipse cx="222" cy="302" rx="5" ry="8" transform="rotate(30 222 302)"/>
+<ellipse cx="175" cy="268" rx="5" ry="8" transform="rotate(-30 175 268)"/>
+<ellipse cx="225" cy="238" rx="5" ry="8" transform="rotate(30 225 238)"/>
+</g></svg>

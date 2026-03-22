@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+<g stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M200 400 Q196 360 200 310"/>
+<path d="M170 400 Q188 370 196 340"/>
+<path d="M230 400 Q212 370 204 340"/>
+<path d="M200 310 Q160 270 130 230 Q100 190 100 150 Q100 90 160 60 Q200 44 240 60 Q300 90 300 150 Q300 190 270 230 Q240 270 200 310Z"/>
+<path d="M200 310 L200 44"/>
+<path d="M200 270 Q152 244 122 212"/>
+<path d="M200 270 Q248 244 278 212"/>
+<path d="M200 222 Q148 198 118 166"/>
+<path d="M200 222 Q252 198 282 166"/>
+<path d="M200 175 Q152 154 128 128"/>
+<path d="M200 175 Q248 154 272 128"/>
+<ellipse cx="130" cy="215" rx="15" ry="22" transform="rotate(-20 130 215)"/>
+<ellipse cx="270" cy="215" rx="15" ry="22" transform="rotate(20 270 215)"/>
+<ellipse cx="120" cy="168" rx="12" ry="18" transform="rotate(-25 120 168)"/>
+<ellipse cx="280" cy="168" rx="12" ry="18" transform="rotate(25 280 168)"/>
+</g></svg>

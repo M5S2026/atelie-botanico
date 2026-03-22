@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.aiox/
+.env
+.env.*
+*.log
+.DS_Store

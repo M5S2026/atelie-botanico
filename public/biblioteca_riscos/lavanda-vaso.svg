@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+<g stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M175 400 Q178 375 182 355 Q186 335 190 310"/>
+<path d="M200 400 Q198 370 200 340 Q202 310 200 280"/>
+<path d="M225 400 Q222 375 218 355 Q214 335 210 310"/>
+<path d="M178 310 Q172 285 176 258 Q172 232 178 205 Q174 180 180 155"/>
+<path d="M200 280 Q196 255 200 228 Q196 202 200 175 Q196 148 200 120"/>
+<path d="M210 310 Q218 285 214 258 Q218 232 212 205 Q216 180 210 155"/>
+<ellipse cx="180" cy="150" rx="5" ry="8"/>
+<ellipse cx="180" cy="135" rx="5" ry="7"/>
+<ellipse cx="180" cy="121" rx="4" ry="6"/>
+<ellipse cx="180" cy="108" rx="4" ry="6"/>
+<ellipse cx="200" cy="115" rx="5" ry="8"/>
+<ellipse cx="200" cy="100" rx="5" ry="7"/>
+<ellipse cx="200" cy="86" rx="4" ry="6"/>
+<ellipse cx="200" cy="73" rx="4" ry="6"/>
+<ellipse cx="220" cy="150" rx="5" ry="8"/>
+<ellipse cx="220" cy="135" rx="5" ry="7"/>
+<ellipse cx="220" cy="121" rx="4" ry="6"/>
+<ellipse cx="220" cy="108" rx="4" ry="6"/>
+<path d="M160 310 Q200 295 240 310"/>
+<path d="M155 325 Q200 308 245 325"/>
+</g></svg>

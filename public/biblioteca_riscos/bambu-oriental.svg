@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+<g stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="320" cy="80" r="38"/>
+<circle cx="310" cy="72" r="30"/>
+<line x1="130" y1="400" x2="130" y2="20" stroke-width="5"/>
+<line x1="130" y1="75" x2="130" y2="75" stroke-width="7"/>
+<line x1="130" y1="140" x2="130" y2="140" stroke-width="7"/>
+<line x1="130" y1="210" x2="130" y2="210" stroke-width="7"/>
+<line x1="130" y1="275" x2="130" y2="275" stroke-width="7"/>
+<line x1="130" y1="340" x2="130" y2="340" stroke-width="7"/>
+<line x1="180" y1="400" x2="180" y2="50" stroke-width="4"/>
+<line x1="180" y1="100" x2="180" y2="100" stroke-width="5"/>
+<line x1="180" y1="165" x2="180" y2="165" stroke-width="5"/>
+<line x1="180" y1="230" x2="180" y2="230" stroke-width="5"/>
+<line x1="180" y1="295" x2="180" y2="295" stroke-width="5"/>
+<line x1="180" y1="358" x2="180" y2="358" stroke-width="5"/>
+<path d="M130 75 Q105 62 84 50"/>
+<path d="M130 140 Q155 126 176 114"/>
+<path d="M130 210 Q104 196 82 183"/>
+<path d="M180 100 Q205 86 226 73"/>
+<path d="M84 50 Q70 36 68 22"/>
+<path d="M82 183 Q68 168 66 153"/>
+<path d="M226 73 Q240 60 242 45"/>
+</g></svg>

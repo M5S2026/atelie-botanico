@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+<g stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M200 400 Q196 355 200 305"/>
+<path d="M200 360 Q168 342 148 330 Q152 316 168 320"/>
+<path d="M200 340 Q232 322 252 310 Q248 296 232 300"/>
+<path d="M168 295 Q152 272 156 250 Q170 242 174 260"/>
+<path d="M168 295 Q176 272 186 256 Q198 256 200 270"/>
+<path d="M200 270 Q214 258 230 256 Q234 270 228 284"/>
+<path d="M228 284 Q240 274 248 268 Q248 252 236 250 Q232 268 228 284Z"/>
+<path d="M200 270 Q196 250 200 235 Q204 250 210 266"/>
+<path d="M200 235 Q190 220 190 204 Q200 198 210 204 Q210 220 200 235"/>
+</g></svg>

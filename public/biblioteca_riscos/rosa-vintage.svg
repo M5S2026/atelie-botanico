@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+<g stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="200" cy="200" r="22"/>
+<path d="M200 178 Q186 160 178 142 Q192 138 202 152 Q206 138 218 142 Q214 162 200 178Z"/>
+<path d="M200 178 Q218 165 232 152 Q238 165 228 176 Q218 182 200 178Z"/>
+<path d="M222 200 Q240 192 252 178 Q258 192 248 202 Q238 210 222 200Z"/>
+<path d="M222 200 Q240 214 246 230 Q232 238 222 228 Q218 216 222 200Z"/>
+<path d="M200 222 Q208 240 202 258 Q190 262 182 248 Q184 234 200 222Z"/>
+<path d="M200 222 Q184 236 170 244 Q162 230 172 220 Q184 214 200 222Z"/>
+<path d="M178 200 Q162 206 148 200 Q148 186 160 180 Q172 180 178 200Z"/>
+<path d="M178 200 Q168 184 170 168 Q184 160 192 172 Q194 186 178 200Z"/>
+<circle cx="200" cy="200" r="56"/>
+<circle cx="200" cy="200" r="88"/>
+<circle cx="200" cy="200" r="118"/>
+</g></svg>

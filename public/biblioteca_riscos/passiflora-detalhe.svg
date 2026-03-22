@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+<g stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="200" cy="200" r="22"/>
+<circle cx="200" cy="200" r="38"/>
+<circle cx="200" cy="200" r="55"/>
+<path d="M200 145 Q184 115 178 80 Q200 70 222 80 Q216 115 200 145Z"/>
+<path d="M200 145 Q184 115 178 80 Q200 70 222 80 Q216 115 200 145Z" transform="rotate(72 200 200)"/>
+<path d="M200 145 Q184 115 178 80 Q200 70 222 80 Q216 115 200 145Z" transform="rotate(144 200 200)"/>
+<path d="M200 145 Q184 115 178 80 Q200 70 222 80 Q216 115 200 145Z" transform="rotate(216 200 200)"/>
+<path d="M200 145 Q184 115 178 80 Q200 70 222 80 Q216 115 200 145Z" transform="rotate(288 200 200)"/>
+<path d="M200 162 L200 88"/>
+<path d="M200 162 L200 88" transform="rotate(36 200 200)"/>
+<path d="M200 162 L200 88" transform="rotate(72 200 200)"/>
+<path d="M200 162 L200 88" transform="rotate(108 200 200)"/>
+<path d="M200 162 L200 88" transform="rotate(144 200 200)"/>
+<path d="M200 162 L200 88" transform="rotate(180 200 200)"/>
+<path d="M200 162 L200 88" transform="rotate(216 200 200)"/>
+<path d="M200 162 L200 88" transform="rotate(252 200 200)"/>
+<path d="M200 162 L200 88" transform="rotate(288 200 200)"/>
+<path d="M200 162 L200 88" transform="rotate(324 200 200)"/>
+<line x1="200" y1="178" x2="200" y2="148" transform="rotate(0 200 200)"/>
+<line x1="200" y1="178" x2="200" y2="148" transform="rotate(72 200 200)"/>
+<line x1="200" y1="178" x2="200" y2="148" transform="rotate(144 200 200)"/>
+<line x1="200" y1="178" x2="200" y2="148" transform="rotate(216 200 200)"/>
+<line x1="200" y1="178" x2="200" y2="148" transform="rotate(288 200 200)"/>
+</g></svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+<g stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<line x1="200" y1="400" x2="200" y2="30" stroke-width="5"/>
+<line x1="200" y1="90" x2="200" y2="90" stroke-width="7"/>
+<line x1="200" y1="155" x2="200" y2="155" stroke-width="7"/>
+<line x1="200" y1="220" x2="200" y2="220" stroke-width="7"/>
+<line x1="200" y1="285" x2="200" y2="285" stroke-width="7"/>
+<line x1="200" y1="345" x2="200" y2="345" stroke-width="7"/>
+<path d="M200 90 Q175 80 155 68"/>
+<path d="M200 155 Q225 142 245 130"/>
+<path d="M200 220 Q172 207 150 194"/>
+<path d="M200 285 Q228 272 250 260"/>
+<path d="M155 68 Q140 52 138 36 Q148 30 156 42"/>
+<path d="M138 36 Q134 22 140 12"/>
+<path d="M245 130 Q260 114 258 98 Q248 94 240 106"/>
+<path d="M258 98 Q264 84 258 74"/>
+<path d="M150 194 Q135 178 133 162 Q143 158 150 170"/>
+<path d="M133 162 Q128 148 134 138"/>
+<path d="M250 260 Q265 244 262 228 Q252 226 245 238"/>
+<path d="M262 228 Q268 214 262 204"/>
+</g></svg>

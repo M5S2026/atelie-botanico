@@ -1,0 +1,34 @@
+project:
+  type: greenfield
+  installedAt: '2026-03-22T22:30:00.000Z'
+  version: 2.1.0
+ide:
+  selected:
+    - claude-code
+  configs:
+    claude-code: true
+mcp:
+  enabled: false
+  configLocation: .claude/mcp.json
+  servers: []
+qa:
+  qaLocation: docs/qa
+prd:
+  prdFile: docs/prd.md
+  prdVersion: v4
+  prdSharded: false
+architecture:
+  architectureFile: docs/architecture.md
+  architectureVersion: v4
+  architectureSharded: false
+devStoryLocation: docs/stories
+slashPrefix: AIOX
+git:
+  showConfigWarning: true
+  cacheTimeSeconds: 300
+boundary:
+  frameworkProtection: true
+projectStatus:
+  enabled: true
+  autoLoadOnAgentActivation: true
+  statusFile: .aiox/project-status.yaml

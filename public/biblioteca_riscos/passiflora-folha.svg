@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+<g stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M100 380 Q130 330 160 280 Q180 240 200 200"/>
+<path d="M160 280 Q148 255 155 238"/>
+<path d="M200 200 Q180 160 200 120 Q220 160 200 200Z"/>
+<circle cx="200" cy="160" r="14"/>
+<circle cx="200" cy="160" r="26"/>
+<path d="M200 134 Q188 112 182 86 Q200 78 218 86 Q212 112 200 134Z"/>
+<path d="M200 134 Q188 112 182 86 Q200 78 218 86 Q212 112 200 134Z" transform="rotate(72 200 160)"/>
+<path d="M200 134 Q188 112 182 86 Q200 78 218 86 Q212 112 200 134Z" transform="rotate(144 200 160)"/>
+<path d="M200 134 Q188 112 182 86 Q200 78 218 86 Q212 112 200 134Z" transform="rotate(216 200 160)"/>
+<path d="M200 134 Q188 112 182 86 Q200 78 218 86 Q212 112 200 134Z" transform="rotate(288 200 160)"/>
+<path d="M200 146 L200 94" transform="rotate(36 200 160)"/>
+<path d="M200 146 L200 94" transform="rotate(108 200 160)"/>
+<path d="M200 146 L200 94" transform="rotate(180 200 160)"/>
+<path d="M200 146 L200 94" transform="rotate(252 200 160)"/>
+<path d="M200 146 L200 94" transform="rotate(324 200 160)"/>
+<path d="M270 200 Q310 180 330 150 Q295 140 280 160 Q310 130 300 110 Q268 118 260 148 Q280 120 260 108 Q240 124 248 152"/>
+<path d="M270 200 L248 152"/>
+<path d="M280 170 Q268 168 262 178"/>
+<path d="M295 148 Q283 146 277 155"/>
+</g></svg>

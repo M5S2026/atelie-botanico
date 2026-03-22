@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+<g stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M150 20 Q200 18 250 22 Q300 40 330 80 Q360 120 350 180 Q340 240 300 280 Q260 320 200 340 Q140 360 90 340 Q40 320 20 270 Q0 220 20 170 Q40 120 80 80 Q110 50 150 20Z"/>
+<path d="M200 340 L200 20"/>
+<path d="M340 180 Q200 170 20 170"/>
+<g transform="translate(100 100)">
+  <path d="M0 -12 Q-4 -20 0 -26 Q4 -20 0 -12Z"/>
+  <path d="M0 -12 Q-4 -20 0 -26 Q4 -20 0 -12Z" transform="rotate(72 0 0)"/>
+  <path d="M0 -12 Q-4 -20 0 -26 Q4 -20 0 -12Z" transform="rotate(144 0 0)"/>
+  <path d="M0 -12 Q-4 -20 0 -26 Q4 -20 0 -12Z" transform="rotate(216 0 0)"/>
+  <path d="M0 -12 Q-4 -20 0 -26 Q4 -20 0 -12Z" transform="rotate(288 0 0)"/>
+  <circle r="5"/>
+</g>
+<g transform="translate(300 100)">
+  <path d="M0 -10 Q-3 -17 0 -22 Q3 -17 0 -10Z"/>
+  <path d="M0 -10 Q-3 -17 0 -22 Q3 -17 0 -10Z" transform="rotate(72 0 0)"/>
+  <path d="M0 -10 Q-3 -17 0 -22 Q3 -17 0 -10Z" transform="rotate(144 0 0)"/>
+  <path d="M0 -10 Q-3 -17 0 -22 Q3 -17 0 -10Z" transform="rotate(216 0 0)"/>
+  <path d="M0 -10 Q-3 -17 0 -22 Q3 -17 0 -10Z" transform="rotate(288 0 0)"/>
+  <circle r="4"/>
+</g>
+<g transform="translate(100 280)">
+  <path d="M0 -10 Q-3 -17 0 -22 Q3 -17 0 -10Z"/>
+  <path d="M0 -10 Q-3 -17 0 -22 Q3 -17 0 -10Z" transform="rotate(72 0 0)"/>
+  <path d="M0 -10 Q-3 -17 0 -22 Q3 -17 0 -10Z" transform="rotate(144 0 0)"/>
+  <path d="M0 -10 Q-3 -17 0 -22 Q3 -17 0 -10Z" transform="rotate(216 0 0)"/>
+  <path d="M0 -10 Q-3 -17 0 -22 Q3 -17 0 -10Z" transform="rotate(288 0 0)"/>
+  <circle r="4"/>
+</g>
+<g transform="translate(300 270)">
+  <path d="M0 -11 Q-4 -18 0 -24 Q4 -18 0 -11Z"/>
+  <path d="M0 -11 Q-4 -18 0 -24 Q4 -18 0 -11Z" transform="rotate(72 0 0)"/>
+  <path d="M0 -11 Q-4 -18 0 -24 Q4 -18 0 -11Z" transform="rotate(144 0 0)"/>
+  <path d="M0 -11 Q-4 -18 0 -24 Q4 -18 0 -11Z" transform="rotate(216 0 0)"/>
+  <path d="M0 -11 Q-4 -18 0 -24 Q4 -18 0 -11Z" transform="rotate(288 0 0)"/>
+  <circle r="4"/>
+</g>
+<g transform="translate(200 190)">
+  <path d="M0 -14 Q-5 -22 0 -28 Q5 -22 0 -14Z"/>
+  <path d="M0 -14 Q-5 -22 0 -28 Q5 -22 0 -14Z" transform="rotate(72 0 0)"/>
+  <path d="M0 -14 Q-5 -22 0 -28 Q5 -22 0 -14Z" transform="rotate(144 0 0)"/>
+  <path d="M0 -14 Q-5 -22 0 -28 Q5 -22 0 -14Z" transform="rotate(216 0 0)"/>
+  <path d="M0 -14 Q-5 -22 0 -28 Q5 -22 0 -14Z" transform="rotate(288 0 0)"/>
+  <circle r="6"/>
+</g>
+<path d="M140 60 Q130 50 138 42 Q146 50 140 60Z" transform="rotate(-20 140 60)"/>
+<path d="M260 55 Q255 44 264 40 Q270 50 260 55Z" transform="rotate(15 260 55)"/>
+<path d="M55 200 Q44 196 46 186 Q56 188 55 200Z" transform="rotate(-30 55 200)"/>
+<path d="M345 200 Q356 198 354 188 Q344 190 345 200Z" transform="rotate(30 345 200)"/>
+<path d="M145 335 Q138 326 146 320 Q152 328 145 335Z" transform="rotate(-10 145 335)"/>
+<path d="M260 330 Q268 322 274 328 Q268 336 260 330Z" transform="rotate(10 260 330)"/>
+</g></svg>

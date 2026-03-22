@@ -1,0 +1,472 @@
+{
+  "total": 65,
+  "categorias": {
+    "rosas": 10,
+    "folhas": 10,
+    "monstera": 5,
+    "ramos": 10,
+    "passiflora": 5,
+    "bromelias": 5,
+    "lavanda": 5,
+    "sakura": 5,
+    "bambu": 5,
+    "lisianto": 5
+  },
+  "riscos": [
+    {
+      "id": "rosa-choux-01",
+      "nome": "Rosa Choux Clássica",
+      "cat": "rosas",
+      "nivel": "iniciante",
+      "arquivo": "rosa-choux-01.svg"
+    },
+    {
+      "id": "rosa-choux-02",
+      "nome": "Rosa Choux com Folhas",
+      "cat": "rosas",
+      "nivel": "iniciante",
+      "arquivo": "rosa-choux-02.svg"
+    },
+    {
+      "id": "rosa-vintage",
+      "nome": "Rosa Vintage Aberta",
+      "cat": "rosas",
+      "nivel": "intermediário",
+      "arquivo": "rosa-vintage.svg"
+    },
+    {
+      "id": "rosa-botao",
+      "nome": "Botão de Rosa com Caule",
+      "cat": "rosas",
+      "nivel": "iniciante",
+      "arquivo": "rosa-botao.svg"
+    },
+    {
+      "id": "rosa-silvestre",
+      "nome": "Rosa Silvestre 5 Pétalas",
+      "cat": "rosas",
+      "nivel": "iniciante",
+      "arquivo": "rosa-silvestre.svg"
+    },
+    {
+      "id": "peonia-completa",
+      "nome": "Peônia Completa",
+      "cat": "rosas",
+      "nivel": "avançado",
+      "arquivo": "peonia-completa.svg"
+    },
+    {
+      "id": "peonia-aberta",
+      "nome": "Peônia Aberta Vista de Cima",
+      "cat": "rosas",
+      "nivel": "intermediário",
+      "arquivo": "peonia-aberta.svg"
+    },
+    {
+      "id": "peonia-lateral",
+      "nome": "Peônia Vista Lateral",
+      "cat": "rosas",
+      "nivel": "intermediário",
+      "arquivo": "peonia-lateral.svg"
+    },
+    {
+      "id": "rosa-trepadeira",
+      "nome": "Rosa Trepadeira Ramo",
+      "cat": "rosas",
+      "nivel": "intermediário",
+      "arquivo": "rosa-trepadeira.svg"
+    },
+    {
+      "id": "peonia-bouquet",
+      "nome": "Peônia Bouquet 3 Flores",
+      "cat": "rosas",
+      "nivel": "avançado",
+      "arquivo": "peonia-bouquet.svg"
+    },
+    {
+      "id": "monstera-simples",
+      "nome": "Monstera Deliciosa",
+      "cat": "folhas",
+      "nivel": "iniciante",
+      "arquivo": "monstera-simples.svg"
+    },
+    {
+      "id": "folha-bananeira",
+      "nome": "Folha de Bananeira",
+      "cat": "folhas",
+      "nivel": "iniciante",
+      "arquivo": "folha-bananeira.svg"
+    },
+    {
+      "id": "folha-tropical-grande",
+      "nome": "Folha Tropical Nervurada",
+      "cat": "folhas",
+      "nivel": "intermediário",
+      "arquivo": "folha-tropical-grande.svg"
+    },
+    {
+      "id": "folha-palmeira",
+      "nome": "Folha de Palmeira",
+      "cat": "folhas",
+      "nivel": "intermediário",
+      "arquivo": "folha-palmeira.svg"
+    },
+    {
+      "id": "folha-copo-leite",
+      "nome": "Folha Copo de Leite",
+      "cat": "folhas",
+      "nivel": "iniciante",
+      "arquivo": "folha-copo-leite.svg"
+    },
+    {
+      "id": "folha-ficus",
+      "nome": "Folha Ficus Lira",
+      "cat": "folhas",
+      "nivel": "iniciante",
+      "arquivo": "folha-ficus.svg"
+    },
+    {
+      "id": "folha-heliconia",
+      "nome": "Folha Helicônia",
+      "cat": "folhas",
+      "nivel": "intermediário",
+      "arquivo": "folha-heliconia.svg"
+    },
+    {
+      "id": "folha-anthurium",
+      "nome": "Anthurium Folha",
+      "cat": "folhas",
+      "nivel": "iniciante",
+      "arquivo": "folha-anthurium.svg"
+    },
+    {
+      "id": "folha-calathea",
+      "nome": "Calathea Ornata",
+      "cat": "folhas",
+      "nivel": "avançado",
+      "arquivo": "folha-calathea.svg"
+    },
+    {
+      "id": "folha-composicao",
+      "nome": "Composição 3 Folhas",
+      "cat": "folhas",
+      "nivel": "intermediário",
+      "arquivo": "folha-composicao.svg"
+    },
+    {
+      "id": "monstera-baby",
+      "nome": "Monstera Baby Folha",
+      "cat": "monstera",
+      "nivel": "iniciante",
+      "arquivo": "monstera-baby.svg"
+    },
+    {
+      "id": "monstera-dupla",
+      "nome": "Monstera Par de Folhas",
+      "cat": "monstera",
+      "nivel": "intermediário",
+      "arquivo": "monstera-dupla.svg"
+    },
+    {
+      "id": "monstera-variegata",
+      "nome": "Monstera Variegata",
+      "cat": "monstera",
+      "nivel": "avançado",
+      "arquivo": "monstera-variegata.svg"
+    },
+    {
+      "id": "monstera-caule",
+      "nome": "Monstera com Caule e Raízes",
+      "cat": "monstera",
+      "nivel": "intermediário",
+      "arquivo": "monstera-caule.svg"
+    },
+    {
+      "id": "monstera-adansonii",
+      "nome": "Monstera Adansonii",
+      "cat": "monstera",
+      "nivel": "intermediário",
+      "arquivo": "monstera-adansonii.svg"
+    },
+    {
+      "id": "ramo-flores",
+      "nome": "Ramo com 3 Flores",
+      "cat": "ramos",
+      "nivel": "iniciante",
+      "arquivo": "ramo-flores.svg"
+    },
+    {
+      "id": "ramo-botanico",
+      "nome": "Ramo Botânico Folhado",
+      "cat": "ramos",
+      "nivel": "intermediário",
+      "arquivo": "ramo-botanico.svg"
+    },
+    {
+      "id": "ramo-cerejeira",
+      "nome": "Ramo de Cerejeira",
+      "cat": "ramos",
+      "nivel": "intermediário",
+      "arquivo": "ramo-cerejeira.svg"
+    },
+    {
+      "id": "galho-passaro",
+      "nome": "Galho com Pássaro Pousado",
+      "cat": "ramos",
+      "nivel": "intermediário",
+      "arquivo": "galho-passaro.svg"
+    },
+    {
+      "id": "ramo-eucalipto",
+      "nome": "Ramo de Eucalipto",
+      "cat": "ramos",
+      "nivel": "iniciante",
+      "arquivo": "ramo-eucalipto.svg"
+    },
+    {
+      "id": "ramo-oliva",
+      "nome": "Ramo de Oliveira",
+      "cat": "ramos",
+      "nivel": "iniciante",
+      "arquivo": "ramo-oliva.svg"
+    },
+    {
+      "id": "ramo-vintage",
+      "nome": "Ramo Vintage com Bagas",
+      "cat": "ramos",
+      "nivel": "intermediário",
+      "arquivo": "ramo-vintage.svg"
+    },
+    {
+      "id": "ramo-hibisco",
+      "nome": "Ramo com Hibisco",
+      "cat": "ramos",
+      "nivel": "intermediário",
+      "arquivo": "ramo-hibisco.svg"
+    },
+    {
+      "id": "galho-coral",
+      "nome": "Galho Coral com Flores",
+      "cat": "ramos",
+      "nivel": "avançado",
+      "arquivo": "galho-coral.svg"
+    },
+    {
+      "id": "ramo-primavera",
+      "nome": "Ramo de Primavera Misto",
+      "cat": "ramos",
+      "nivel": "intermediário",
+      "arquivo": "ramo-primavera.svg"
+    },
+    {
+      "id": "passiflora-completa",
+      "nome": "Passiflora Completa",
+      "cat": "passiflora",
+      "nivel": "avançado",
+      "arquivo": "passiflora-completa.svg"
+    },
+    {
+      "id": "passiflora-detalhe",
+      "nome": "Passiflora Vista Frontal",
+      "cat": "passiflora",
+      "nivel": "avançado",
+      "arquivo": "passiflora-detalhe.svg"
+    },
+    {
+      "id": "passiflora-ramo",
+      "nome": "Passiflora com Gavinhas",
+      "cat": "passiflora",
+      "nivel": "avançado",
+      "arquivo": "passiflora-ramo.svg"
+    },
+    {
+      "id": "passiflora-botao",
+      "nome": "Passiflora Botão Fechado",
+      "cat": "passiflora",
+      "nivel": "intermediário",
+      "arquivo": "passiflora-botao.svg"
+    },
+    {
+      "id": "passiflora-folha",
+      "nome": "Passiflora Flor e Folha",
+      "cat": "passiflora",
+      "nivel": "avançado",
+      "arquivo": "passiflora-folha.svg"
+    },
+    {
+      "id": "bromelias-grupo",
+      "nome": "Bromélias em Grupo",
+      "cat": "bromelias",
+      "nivel": "avançado",
+      "arquivo": "bromelias-grupo.svg"
+    },
+    {
+      "id": "tulipa-simples",
+      "nome": "Tulipa Simples",
+      "cat": "bromelias",
+      "nivel": "iniciante",
+      "arquivo": "tulipa-simples.svg"
+    },
+    {
+      "id": "tulipa-buque",
+      "nome": "Buquê de Tulipas",
+      "cat": "bromelias",
+      "nivel": "intermediário",
+      "arquivo": "tulipa-buque.svg"
+    },
+    {
+      "id": "bromelias-vaso",
+      "nome": "Bromélia Ornamental",
+      "cat": "bromelias",
+      "nivel": "intermediário",
+      "arquivo": "bromelias-vaso.svg"
+    },
+    {
+      "id": "tulipa-lateral",
+      "nome": "Tulipa Vista Lateral",
+      "cat": "bromelias",
+      "nivel": "iniciante",
+      "arquivo": "tulipa-lateral.svg"
+    },
+    {
+      "id": "lavanda-cacho",
+      "nome": "Lavanda Cacho",
+      "cat": "lavanda",
+      "nivel": "iniciante",
+      "arquivo": "lavanda-cacho.svg"
+    },
+    {
+      "id": "hortelã-ramo",
+      "nome": "Hortelã e Ervas",
+      "cat": "lavanda",
+      "nivel": "iniciante",
+      "arquivo": "hortelã-ramo.svg"
+    },
+    {
+      "id": "alecrim-ramo",
+      "nome": "Alecrim Ramo",
+      "cat": "lavanda",
+      "nivel": "iniciante",
+      "arquivo": "alecrim-ramo.svg"
+    },
+    {
+      "id": "ervas-composicao",
+      "nome": "Composição de Ervas",
+      "cat": "lavanda",
+      "nivel": "intermediário",
+      "arquivo": "ervas-composicao.svg"
+    },
+    {
+      "id": "lavanda-vaso",
+      "nome": "Lavanda em Vaso Buquê",
+      "cat": "lavanda",
+      "nivel": "iniciante",
+      "arquivo": "lavanda-vaso.svg"
+    },
+    {
+      "id": "sakura-ramo",
+      "nome": "Sakura Ramo Clássico",
+      "cat": "sakura",
+      "nivel": "intermediário",
+      "arquivo": "sakura-ramo.svg"
+    },
+    {
+      "id": "sakura-flor",
+      "nome": "Sakura Flor Individual",
+      "cat": "sakura",
+      "nivel": "iniciante",
+      "arquivo": "sakura-flor.svg"
+    },
+    {
+      "id": "sakura-chuva",
+      "nome": "Chuva de Pétalas Sakura",
+      "cat": "sakura",
+      "nivel": "intermediário",
+      "arquivo": "sakura-chuva.svg"
+    },
+    {
+      "id": "sakura-arvore",
+      "nome": "Árvore Sakura Miniatura",
+      "cat": "sakura",
+      "nivel": "avançado",
+      "arquivo": "sakura-arvore.svg"
+    },
+    {
+      "id": "sakura-mandala",
+      "nome": "Mandala Sakura",
+      "cat": "sakura",
+      "nivel": "avançado",
+      "arquivo": "sakura-mandala.svg"
+    },
+    {
+      "id": "bambu-classico",
+      "nome": "Bambu Clássico 3 Hastes",
+      "cat": "bambu",
+      "nivel": "iniciante",
+      "arquivo": "bambu-classico.svg"
+    },
+    {
+      "id": "bambu-folhas",
+      "nome": "Bambu com Folhas",
+      "cat": "bambu",
+      "nivel": "iniciante",
+      "arquivo": "bambu-folhas.svg"
+    },
+    {
+      "id": "bambu-oriental",
+      "nome": "Bambu Oriental com Lua",
+      "cat": "bambu",
+      "nivel": "intermediário",
+      "arquivo": "bambu-oriental.svg"
+    },
+    {
+      "id": "bambu-vento",
+      "nome": "Bambu ao Vento",
+      "cat": "bambu",
+      "nivel": "intermediário",
+      "arquivo": "bambu-vento.svg"
+    },
+    {
+      "id": "bambu-composicao",
+      "nome": "Bambu Composição Asiática",
+      "cat": "bambu",
+      "nivel": "avançado",
+      "arquivo": "bambu-composicao.svg"
+    },
+    {
+      "id": "lisianto-simples",
+      "nome": "Lisianto Simples",
+      "cat": "lisianto",
+      "nivel": "iniciante",
+      "arquivo": "lisianto-simples.svg"
+    },
+    {
+      "id": "lisianto-duplo",
+      "nome": "Lisianto Duplo Pétalas",
+      "cat": "lisianto",
+      "nivel": "intermediário",
+      "arquivo": "lisianto-duplo.svg"
+    },
+    {
+      "id": "lisianto-ramo",
+      "nome": "Ramo de Lisianto",
+      "cat": "lisianto",
+      "nivel": "intermediário",
+      "arquivo": "lisianto-ramo.svg"
+    },
+    {
+      "id": "lisianto-buque",
+      "nome": "Buquê de Lisianto",
+      "cat": "lisianto",
+      "nivel": "avançado",
+      "arquivo": "lisianto-buque.svg"
+    },
+    {
+      "id": "lisianto-folha",
+      "nome": "Lisianto com Folhas",
+      "cat": "lisianto",
+      "nivel": "intermediário",
+      "arquivo": "lisianto-folha.svg"
+    }
+  ]
+}
