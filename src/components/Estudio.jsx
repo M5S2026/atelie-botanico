@@ -432,18 +432,18 @@ export default function Estudio({ onUseInProjetor }) {
         {/* Row 4: Actions */}
         <div style={{ display: 'flex', gap: 6 }}>
           <button onClick={() => setShowMotifs(true)} style={{
-            flex: 1, padding: '8px', fontSize: 11, fontWeight: 600, borderRadius: 8,
-            background: 'rgba(255,255,255,0.06)', border: '0.5px solid rgba(255,255,255,0.15)',
+            flex: 1, padding: '10px', fontSize: 11, fontWeight: 600, borderRadius: 50,
+            background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.15)',
             color: 'rgba(255,255,255,0.7)',
           }}>Motivo base</button>
           <button onClick={exportPNG} style={{
-            flex: 1, padding: '8px', fontSize: 11, fontWeight: 600, borderRadius: 8,
+            flex: 1, padding: '10px', fontSize: 11, fontWeight: 600, borderRadius: 50,
             background: 'rgba(29,158,117,0.15)', border: '1px solid rgba(93,202,165,0.3)',
             color: '#5DCAA5',
           }}>Exportar PNG</button>
           <button onClick={sendToProjetor} style={{
-            flex: 1, padding: '8px', fontSize: 11, fontWeight: 700, borderRadius: 8,
-            background: '#1D9E75', border: 'none', color: '#fff',
+            flex: 1, padding: '10px', fontSize: 11, fontWeight: 700, borderRadius: 50,
+            background: 'var(--verde2)', border: 'none', color: '#fff',
           }}>Usar no Projetor</button>
         </div>
 

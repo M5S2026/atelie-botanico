@@ -116,10 +116,12 @@ export default function Simulador() {
   }
 
   return (
-    <div style={{ height: '100%', overflowY: 'auto', padding: '12px 14px 80px' }}>
+    <div style={{ height: '100%', overflowY: 'auto', padding: '16px 16px 80px' }}>
+      {/* Header */}
+      <div style={{ fontSize: 11, letterSpacing: 4, textTransform: 'uppercase', color: 'var(--verde3)', marginBottom: 12 }}>Simulador</div>
       {/* Canvas */}
       <canvas ref={canvasRef} width={320} height={200}
-        style={{ width: '100%', borderRadius: 14, marginBottom: 14, display: 'block' }} />
+        style={{ width: '100%', borderRadius: 20, marginBottom: 16, display: 'block' }} />
 
       {/* Cor */}
       <div style={{ marginBottom: 14 }}>
@@ -190,14 +192,14 @@ export default function Simulador() {
       </div>
 
       <button onClick={calcular} style={{
-        width: '100%', padding: '12px', fontSize: 14, fontWeight: 700,
-        background: '#1D9E75', color: '#fff', border: 'none', borderRadius: 12, marginBottom: 16,
+        width: '100%', padding: '14px', fontSize: 15, fontWeight: 700,
+        background: 'var(--verde2)', color: '#fff', border: 'none', borderRadius: 50, marginBottom: 16,
       }}>Calcular materiais e orçamento</button>
 
       {resultado && (
         <div style={{
-          background: 'rgba(29,158,117,0.1)', border: '1px solid rgba(93,202,165,0.25)',
-          borderRadius: 14, padding: '14px 16px',
+          background: 'rgba(15,110,86,0.12)', border: '1px solid rgba(93,202,165,0.2)',
+          borderRadius: 20, padding: '20px 22px',
         }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8, marginBottom: 14 }}>
             <StatCard label="Área pintável" value={resultado.areaLiq} unit="m²" />

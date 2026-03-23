@@ -31,12 +31,13 @@ export default function Referencias({ onSelectRef }) {
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column' }}>
-      {/* Upload */}
-      <div style={{ padding:'12px 14px 0', flexShrink:0 }}>
+      {/* Header + Upload */}
+      <div style={{ padding:'16px 16px 0', flexShrink:0 }}>
+        <div style={{ fontSize:11, letterSpacing:4, textTransform:'uppercase', color:'var(--verde3)', marginBottom:10 }}>Referências</div>
         <button onClick={()=>fileRef.current.click()} style={{
-          width:'100%', padding:'10px', fontSize:12, fontWeight:600,
+          width:'100%', padding:'12px', fontSize:13, fontWeight:600,
           background:'rgba(29,158,117,0.15)', border:'1px dashed rgba(93,202,165,0.4)',
-          color:'#5DCAA5', borderRadius:10, cursor:'pointer',
+          color:'#5DCAA5', borderRadius:50, cursor:'pointer',
         }}>
           📷 Carregar minha foto de referência
         </button>
@@ -108,8 +109,8 @@ export default function Referencias({ onSelectRef }) {
           </div>
           <div style={{ display:'flex', gap:8 }}>
             <button onClick={()=>onSelectRef(sel)} style={{
-              flex:1, padding:'9px', fontSize:12, fontWeight:700,
-              background:'#185FA5', color:'#fff', border:'none', borderRadius:8,
+              flex:1, padding:'12px', fontSize:13, fontWeight:700,
+              background:'var(--azul2)', color:'#fff', border:'none', borderRadius:50,
             }}>
               Usar no projetor
             </button>

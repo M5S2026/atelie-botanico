@@ -259,18 +259,18 @@ export default function Projetor({ risco, referencia }) {
         {/* Action buttons */}
         <div style={{ display: 'flex', gap: 8, paddingBottom: 6 }}>
           <button onClick={startCamera} style={{
-            flex: 2, padding: '9px', fontSize: 12, fontWeight: 700,
-            background: '#1D9E75', color: '#fff', border: 'none', borderRadius: 10,
+            flex: 2, padding: '12px', fontSize: 13, fontWeight: 700,
+            background: 'var(--verde2)', color: '#fff', border: 'none', borderRadius: 50,
           }}>Iniciar câmera</button>
           <button onClick={flipCamera} style={{
-            flex: 1, padding: '9px', fontSize: 12, fontWeight: 600,
+            flex: 1, padding: '12px', fontSize: 12, fontWeight: 600,
             background: 'rgba(255,255,255,0.08)', color: '#fff',
-            border: '0.5px solid rgba(255,255,255,0.2)', borderRadius: 10,
+            border: '1px solid rgba(255,255,255,0.2)', borderRadius: 50,
           }}>Virar</button>
           <button onClick={capture} style={{
-            flex: 1, padding: '9px', fontSize: 12, fontWeight: 600,
+            flex: 1, padding: '12px', fontSize: 12, fontWeight: 600,
             background: 'rgba(255,255,255,0.08)', color: '#fff',
-            border: '0.5px solid rgba(255,255,255,0.2)', borderRadius: 10,
+            border: '1px solid rgba(255,255,255,0.2)', borderRadius: 50,
           }}>Capturar</button>
         </div>
       </div>

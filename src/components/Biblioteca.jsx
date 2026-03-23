@@ -18,11 +18,12 @@ export default function Biblioteca({ onSelectRisco }) {
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column' }}>
-      {/* Search */}
-      <div style={{ padding:'12px 14px 0', flexShrink:0 }}>
+      {/* Header */}
+      <div style={{ padding:'16px 16px 0', flexShrink:0 }}>
+        <div style={{ fontSize:11, letterSpacing:4, textTransform:'uppercase', color:'var(--verde3)', marginBottom:8 }}>Biblioteca</div>
         <input value={q} onChange={e=>setQ(e.target.value)} placeholder="Buscar risco..." style={{
-          width:'100%', padding:'8px 12px', fontSize:13, borderRadius:10,
-          border:'0.5px solid rgba(93,202,165,0.3)', background:'rgba(255,255,255,0.06)',
+          width:'100%', padding:'10px 14px', fontSize:13, borderRadius:50,
+          border:'1px solid rgba(93,202,165,0.25)', background:'rgba(255,255,255,0.06)',
           color:'#fff', outline:'none',
         }} />
       </div>
@@ -51,10 +52,10 @@ export default function Biblioteca({ onSelectRisco }) {
             const isSelected = sel?.id === r.id
             return (
               <div key={r.id} onClick={()=>select(r)} style={{
-                borderRadius:12,
-                border: isSelected ? '2px solid #5DCAA5' : '0.5px solid rgba(93,202,165,0.15)',
-                background: isSelected ? 'rgba(93,202,165,0.1)' : 'rgba(255,255,255,0.04)',
-                padding:8, cursor:'pointer', transition:'all 0.15s',
+                borderRadius:20,
+                border: isSelected ? '2px solid #5DCAA5' : '1px solid rgba(93,202,165,0.15)',
+                background: isSelected ? 'rgba(93,202,165,0.1)' : 'rgba(15,110,86,0.12)',
+                padding:10, cursor:'pointer', transition:'all 0.2s',
               }}>
                 <div style={{ background:'rgba(0,0,0,0.3)', borderRadius:8, marginBottom:6, overflow:'hidden' }}>
                   <svg viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg"
@@ -87,8 +88,8 @@ export default function Biblioteca({ onSelectRisco }) {
             </div>
             <div style={{ display:'flex', gap:8 }}>
               <button onClick={()=>onSelectRisco(sel)} style={{
-                flex:1, padding:'8px', fontSize:12, fontWeight:700,
-                background:'#1D9E75', color:'#fff', border:'none', borderRadius:8,
+                flex:1, padding:'12px', fontSize:13, fontWeight:700,
+                background:'var(--verde2)', color:'#fff', border:'none', borderRadius:50,
               }}>
                 Usar no projetor
               </button>
