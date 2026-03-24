@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Home from './components/Home.jsx'
+import Galeria from './components/Galeria.jsx'
 import Biblioteca from './components/Biblioteca.jsx'
 import Estudio from './components/Estudio.jsx'
 import Referencias from './components/Referencias.jsx'
@@ -46,7 +47,7 @@ export default function App() {
     <PlanProvider>
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <main style={{ flex: 1, overflow: 'hidden' }}>
-        {tab === 'home'        && <Home onNavigate={setTab} />}
+        {tab === 'home'        && <Galeria />}
         {tab === 'biblioteca'  && <Biblioteca onSelectRisco={goToProjetor} />}
         {tab === 'estudio'     && <Estudio onUseInProjetor={goToProjetorCustom} />}
         {tab === 'referencias' && <Referencias onSelectRef={goToProjetorRef} />}
