@@ -5,7 +5,9 @@ import Estudio from './components/Estudio.jsx'
 import Referencias from './components/Referencias.jsx'
 import Projetor from './components/Projetor.jsx'
 import Simulador from './components/Simulador.jsx'
+import Planos from './components/Planos.jsx'
 import InstallPrompt from './components/InstallPrompt.jsx'
+import { PlanProvider } from './hooks/usePlan.jsx'
 
 const TABS = [
   { id: 'home',       icon: '🌿', label: 'Início'     },
@@ -14,6 +16,7 @@ const TABS = [
   { id: 'referencias',icon: '📸',  label: 'Fotos'      },
   { id: 'projetor',   icon: '📱',  label: 'Projetor'   },
   { id: 'simulador',  icon: '🎨',  label: 'Parede'     },
+  { id: 'planos',     icon: '⭐',  label: 'Planos'     },
 ]
 
 export default function App() {
@@ -40,6 +43,7 @@ export default function App() {
   }
 
   return (
+    <PlanProvider>
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <main style={{ flex: 1, overflow: 'hidden' }}>
         {tab === 'home'        && <Home onNavigate={setTab} />}
@@ -48,6 +52,7 @@ export default function App() {
         {tab === 'referencias' && <Referencias onSelectRef={goToProjetorRef} />}
         {tab === 'projetor'    && <Projetor risco={selectedRisco} referencia={selectedRef} />}
         {tab === 'simulador'   && <Simulador />}
+        {tab === 'planos'      && <Planos onClose={() => setTab('home')} />}
       </main>
 
       <InstallPrompt />
@@ -78,5 +83,6 @@ export default function App() {
         ))}
       </nav>
     </div>
+    </PlanProvider>
   )
 }
