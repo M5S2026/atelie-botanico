@@ -68,7 +68,7 @@ PWA para pintoras decorativas, artesãs, professoras de pintura e entusiastas DI
 
 ## 6. Planos e Preços
 
-| Feature | Florzinha (Grátis) | Artista (R$19,90/mês) | Ateliê Pro (R$197 único) |
+| Feature | Florzinha (Grátis) | Artista (R$49/mês) | Ateliê Pro (R$497/ano) |
 |---------|-------------------|----------------------|-------------------------|
 | Motivos | 5 presets | Biblioteca 50+ | 50+ + novos mensais |
 | Projetor | Marca d'água | HD sem marca | 4K sem marca |

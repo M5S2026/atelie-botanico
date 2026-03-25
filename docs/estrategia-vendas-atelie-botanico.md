@@ -161,10 +161,10 @@ ENGAJAMENTO (usa 2+ modulos, volta em 3 dias)
 GATILHO DE UPGRADE (atinge limite do plano Florzinha)
     |
     v
-CONVERSAO ARTISTA (R$19,90/mes)
+CONVERSAO ARTISTA (R$49/mes)
     |
     v
-UPSELL PRO (R$197 unico -- para profissionais)
+UPSELL PRO (R$497/ano -- para profissionais)
 ```
 
 ### Gatilhos Especificos de Upgrade (Florzinha --> Artista)
@@ -182,7 +182,7 @@ Estes sao os momentos em que a usuaria **sente** a limitacao do plano gratis:
 ```
 Texto do modal:
 "Esse recurso faz parte do plano Artista.
-Por R$19,90/mes, voce tem acesso a tudo.
+Por R$49/mes, voce tem acesso a tudo.
 Cancele quando quiser."
 
 [Quero experimentar]  [Agora nao]
@@ -199,7 +199,7 @@ Cancele quando quiser."
 
 ```
 "Voce usa o Atelie como profissional.
-Atelie Pro por R$197 (pagamento unico, acesso vitalicio).
+Atelie Pro por R$497/ano (economize 15% vs mensal).
 Exportacao SVG 6000px + novos motivos todo mes."
 
 [Quero ser Pro]
@@ -354,7 +354,7 @@ O principal concorrente percebido nao e outro app -- e o **projetor fisico**. Us
 ```
 Projetor fisico Artograph: R$899
 Projetor fisico LED pequeno: R$399
-Atelie Botanico Artista: R$19,90/mes
+Atelie Botanico Artista: R$49/mes
 (E ainda vem com Estudio + Simulador + 50 riscos)
 ```
 
@@ -362,16 +362,16 @@ Atelie Botanico Artista: R$19,90/mes
 ```
 Curso presencial de pintura decorativa: R$350-800
 Curso online (Domestika/Udemy): R$89-199
-Atelie Botanico Pro (vitalicio): R$197
+Atelie Botanico Pro (anual): R$497/ano
 (Ferramenta completa que voce usa em TODOS os projetos)
 ```
 
 ### Urgencia e Escassez
 
 **Lancamento (primeiros 30 dias):**
-- Plano Artista: R$14,90/mes (25% off) para quem assinar no primeiro mes
-- Plano Pro: R$147 (26% off) para as primeiras 50 compras
-- Copy: "Preco de lancamento. Depois volta para R$19,90 e R$197."
+- Plano Artista: R$37/mes (25% off) para quem assinar no primeiro mes
+- Plano Pro: R$367/ano (26% off) para as primeiras 50 compras
+- Copy: "Preco de lancamento. Depois volta para R$49 e R$497."
 
 **Escassez genuina (nao fabricada):**
 - "Novos motivos mensais exclusivos para assinantes" -- quem entrar depois perde os anteriores
@@ -386,20 +386,20 @@ Justificativa: A taxa media de conversao de free trial para SaaS e 10-25%, muito
 **Implementacao:**
 - Primeiro uso: "Teste todos os recursos por 7 dias. Sem cartao."
 - Dia 5: Push notification "Faltam 2 dias do seu teste gratis. Gostou?"
-- Dia 7: "Seu teste terminou. Quer continuar com acesso total? R$19,90/mes"
-- Dia 8: Email "Sentimos sua falta. Aqui esta 20% off no primeiro mes: R$15,90"
+- Dia 7: "Seu teste terminou. Quer continuar com acesso total? R$49/mes"
+- Dia 8: Email "Sentimos sua falta. Aqui esta 20% off no primeiro mes: R$39,20"
 
 ### Parcelamento via PayPal
 
 O PayPal Brasil suporta parcelamento. Use para o plano Pro:
-- "R$197 a vista ou 3x de R$65,67 no PayPal"
-- Isso reduz barreira psicologica para quem acha R$197 caro de uma vez
+- "R$497/ano a vista ou 12x de R$41,42 no PayPal"
+- Isso reduz barreira psicologica para quem acha R$497 caro de uma vez
 
 ### Precos Psicologicos -- Validacao
 
 Os precos atuais ja usam boas praticas:
-- R$19,90 (nao R$20) -- terminacao em 9 funciona no Brasil
-- R$197 (nao R$200) -- ancora abaixo de R$200, faixa de decisao menor
+- R$49 (nao R$50) -- ancora abaixo de R$50, faixa de decisao menor
+- R$497 (nao R$500) -- ancora abaixo de R$500, mesma logica
 - "Gratis" como tier -- essencial para viralidade e boca a boca
 
 ---
@@ -421,14 +421,14 @@ Criei um app gratis para pintoras que transforma o celular
 em projetor de riscos. Tem 65 riscos botanicos incluidos.
 
 Pensei que poderia ser util pra voce e pras suas alunas.
-Queria te dar acesso vitalicio ao plano Pro (R$197) de graca,
+Queria te dar acesso anual ao plano Pro (R$497) de graca,
 em troca de um feedback sincero.
 
 Posso te mandar o link?
 ```
 
 **Proposta de parceria:**
-- Acesso Pro gratis vitalicio para a professora
+- Acesso Pro anual gratis para a professora
 - Desconto exclusivo de 30% para alunas dela (codigo personalizado)
 - Comissao de 20% sobre vendas geradas (via codigo rastreavel no PayPal)
 - Em troca: 1 post ou story mostrando o app + link nas aulas online
@@ -524,7 +524,7 @@ A meta do PRD e 8% de churn mensal. Isso significa que em 12 meses, voce precisa
 
 **7. Upgrade path claro com beneficios cumulativos**
 - Quem e Artista por 6+ meses ganha desconto de 15% no Pro
-- Copy: "Voce ja investiu R$119 nos ultimos 6 meses. Por R$167 (desconto especial), voce tem acesso Pro vitalicio."
+- Copy: "Voce ja investiu R$294 nos ultimos 6 meses. Por R$422/ano (desconto especial de 15%), voce economiza ainda mais."
 - Converte churn potencial em upsell
 
 ---

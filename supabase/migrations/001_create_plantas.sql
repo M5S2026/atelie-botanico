@@ -33,7 +33,7 @@ create policy "plantas_auth_delete"
 
 -- Seed initial data
 insert into plantas (name, category, real, sketch) values
-  ('Peônia Imperial', 'Flores', '/gallery/peonia-referencia.png', '/gallery/sakura-risco.png'),
-  ('Sakura',          'Flores', '/gallery/sakura-foto.png',       '/gallery/sakura-risco.png'),
-  ('Rosa Azul',       'Flores', '/gallery/rosa-azul-foto.png',    null),
-  ('Arara Tropical',  'Fauna',  '/gallery/araras-foto.png',       null);
+  ('Peônia Imperial', 'Flores', '/gallery/peonia-referencia.webp', '/gallery/sakura-risco.webp'),
+  ('Sakura',          'Flores', '/gallery/sakura-foto.webp',       '/gallery/sakura-risco.webp'),
+  ('Rosa Azul',       'Flores', '/gallery/rosa-azul-foto.webp',    null),
+  ('Arara Tropical',  'Fauna',  '/gallery/araras-foto.webp',       null);

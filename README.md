@@ -44,8 +44,8 @@ Na landing page (`atelie_botanico_landing.html`), substitua `SEU_EMAIL_PAYPAL` p
 
 ## Planos
 - **Florzinha** — Grátis (5 riscos, projetor com marca d'água)
-- **Artista** — R$19,90/mês (biblioteca completa, sem marca d'água)
-- **Ateliê Pro** — R$197 único (tudo + acesso vitalício)
+- **Artista** — R$49/mês (biblioteca completa, sem marca d'água)
+- **Ateliê Pro** — R$497/ano (tudo + acesso completo)
 
 ## Estrutura do projeto
 ```

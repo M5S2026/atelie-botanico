@@ -1,12 +1,27 @@
 import { loadStripe } from '@stripe/stripe-js'
 
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY)
+const stripeKey = import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY
+if (!stripeKey) {
+  console.warn('[Stripe] VITE_STRIPE_PUBLISHABLE_KEY not set — payments disabled')
+}
+const stripePromise = stripeKey ? loadStripe(stripeKey) : null
 
-// Price IDs need to be created in Stripe Dashboard
-// These are placeholders — replace with actual IDs after creating products
+// ---------------------------------------------------------------
+// Stripe Dashboard → Products → Create product for each plan:
+//
+// 1. "Artista" (recurring/month):
+//    - BRL: R$49,00/mês → copy price ID → paste below
+//    - JPY: ¥1.500/月   → copy price ID → paste below
+//
+// 2. "Ateliê Pro" (recurring/year):
+//    - BRL: R$497,00/ano → copy price ID → paste below
+//    - JPY: ¥15.000/年   → copy price ID → paste below
+//
+// Price IDs look like: price_1ABC123def456...
+// ---------------------------------------------------------------
 const PRICES = {
   artista: {
-    BRL: null, // price_xxx from Stripe Dashboard
+    BRL: null,
     JPY: null,
   },
   pro: {
@@ -51,7 +66,7 @@ export const PLANS = {
     name: 'Artista',
     icon: '🌸',
     popular: true,
-    prices: { BRL: 19.90, JPY: 580 },
+    prices: { BRL: 49, JPY: 1500 },
     period: { BRL: 'por mês', JPY: '月額' },
     features: [
       { text: 'Biblioteca completa (50+ motivos)', included: true },
@@ -67,8 +82,8 @@ export const PLANS = {
     id: 'pro',
     name: 'Ateliê Pro',
     icon: '🦜',
-    prices: { BRL: 197, JPY: 5800 },
-    period: { BRL: 'pagamento único', JPY: '一回払い' },
+    prices: { BRL: 497, JPY: 15000 },
+    period: { BRL: 'por ano', JPY: '年額' },
     features: [
       { text: 'Tudo do plano Artista', included: true },
       { text: 'Exportação SVG + PNG até 6000px', included: true },
@@ -76,7 +91,7 @@ export const PLANS = {
       { text: 'Novos riscos mensais vitalícios', included: true },
       { text: 'Paletas de cores premium', included: true },
       { text: 'Suporte via WhatsApp prioritário', included: true },
-      { text: 'Sem mensalidade para sempre', included: true },
+      { text: 'Economia de 15% vs mensal', included: true },
     ],
   },
 }
@@ -89,10 +104,15 @@ export async function createCheckout(planId, currency = 'BRL') {
     return
   }
 
+  if (!stripePromise) {
+    alert('Stripe não configurado. Verifique VITE_STRIPE_PUBLISHABLE_KEY no .env')
+    return
+  }
+
   const stripe = await stripePromise
   const { error } = await stripe.redirectToCheckout({
     lineItems: [{ price: priceId, quantity: 1 }],
-    mode: planId === 'artista' ? 'subscription' : 'payment',
+    mode: 'subscription',
     successUrl: window.location.origin + '/?payment=success',
     cancelUrl: window.location.origin + '/?payment=cancel',
   })

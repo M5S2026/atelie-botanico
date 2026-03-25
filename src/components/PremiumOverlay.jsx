@@ -1,12 +1,12 @@
 // Stripe Payment Links — substitua pelos seus links reais
 const STRIPE_LINKS = {
-  mensal:    'https://buy.stripe.com/SEU_LINK_MENSAL',
-  vitalicio: 'https://buy.stripe.com/SEU_LINK_VITALICIO',
+  mensal: 'https://buy.stripe.com/SEU_LINK_MENSAL',
+  anual:  'https://buy.stripe.com/SEU_LINK_ANUAL',
 }
 
 const OVERLAY_PRICES = {
-  mensal:    { label: 'Acesso Mensal',    price: '49',  cents: ',00', sub: '/mês' },
-  vitalicio: { label: 'Acesso Vitalício', price: '497', cents: ',00', sub: 'à vista ou 12x' },
+  mensal: { label: 'Acesso Mensal', price: '49',  cents: ',00', sub: '/mês' },
+  anual:  { label: 'Acesso Anual',  price: '497', cents: ',00', sub: '/ano' },
 }
 
 function StripeLogo() {
@@ -205,7 +205,7 @@ export default function PremiumOverlay({ isOpen, onClose }) {
             </button>
 
             {/* LIFETIME (featured) */}
-            <button onClick={() => handlePayment('vitalicio')} style={{
+            <button onClick={() => handlePayment('anual')} style={{
               padding: '20px',
               border: '2px solid var(--verde2)',
               borderRadius: 16,
@@ -228,18 +228,18 @@ export default function PremiumOverlay({ isOpen, onClose }) {
                   display: 'block', fontFamily: 'var(--font-display)',
                   fontStyle: 'italic', fontSize: 17, color: '#fff',
                 }}>
-                  {OVERLAY_PRICES.vitalicio.label}
+                  {OVERLAY_PRICES.anual.label}
                 </span>
                 <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.5)' }}>
-                  Pague uma vez, use para sempre
+                  Economize 15% no plano anual
                 </span>
               </div>
-              <PriceTag {...OVERLAY_PRICES.vitalicio} featured />
+              <PriceTag {...OVERLAY_PRICES.anual} featured />
             </button>
           </div>
 
           {/* CTA */}
-          <button onClick={() => handlePayment('vitalicio')} style={{
+          <button onClick={() => handlePayment('anual')} style={{
             width: '100%', marginTop: 24,
             background: 'var(--verde2)', color: '#fff',
             padding: '16px 24px', borderRadius: 50, border: 'none',

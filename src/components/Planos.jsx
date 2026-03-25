@@ -140,7 +140,7 @@ export default function Planos({ onClose }) {
               <div style={{
                 marginTop: 8, fontSize: 11, color: 'rgba(255,255,255,0.35)', textAlign: 'center',
               }}>
-                {isFree ? 'sem cartão necessário' : isPro ? 'pagamento único · garantia 7 dias' : `pagamento seguro via ${method === 'stripe' ? 'Stripe' : 'PayPal'}`}
+                {isFree ? 'sem cartão necessário' : isPro ? 'plano anual · garantia 7 dias' : `pagamento seguro via ${method === 'stripe' ? 'Stripe' : 'PayPal'}`}
               </div>
             </div>
           )
