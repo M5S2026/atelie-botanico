@@ -7,6 +7,8 @@ import Referencias from './components/Referencias.jsx'
 import Projetor from './components/Projetor.jsx'
 import Simulador from './components/Simulador.jsx'
 import Planos from './components/Planos.jsx'
+import PainelAdmin from './components/PainelAdmin.jsx'
+import PremiumOverlay from './components/PremiumOverlay.jsx'
 import InstallPrompt from './components/InstallPrompt.jsx'
 import { PlanProvider } from './hooks/usePlan.jsx'
 
@@ -18,12 +20,14 @@ const TABS = [
   { id: 'projetor',   icon: '📱',  label: 'Projetor'   },
   { id: 'simulador',  icon: '🎨',  label: 'Parede'     },
   { id: 'planos',     icon: '⭐',  label: 'Planos'     },
+  { id: 'admin',      icon: '🔧',  label: 'Admin'      },
 ]
 
 export default function App() {
   const [tab, setTab] = useState('home')
   const [selectedRisco, setSelectedRisco] = useState(null)
   const [selectedRef, setSelectedRef] = useState(null)
+  const [showPremium, setShowPremium] = useState(false)
 
   function goToProjetor(risco) {
     setSelectedRisco(risco)
@@ -54,8 +58,10 @@ export default function App() {
         {tab === 'projetor'    && <Projetor risco={selectedRisco} referencia={selectedRef} />}
         {tab === 'simulador'   && <Simulador />}
         {tab === 'planos'      && <Planos onClose={() => setTab('home')} />}
+        {tab === 'admin'       && <PainelAdmin />}
       </main>
 
+      <PremiumOverlay isOpen={showPremium} onClose={() => setShowPremium(false)} />
       <InstallPrompt />
 
       <nav style={{

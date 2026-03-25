@@ -1,39 +1,22 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Layers, Sun, Contrast, Lock, Unlock, Eye, Image as ImageIcon } from 'lucide-react'
-
-const gallery = [
-  {
-    id: 1,
-    name: 'Peônia Imperial',
-    real: '/gallery/peonia-referencia.png',
-    sketch: '/gallery/sakura-risco.png',
-    category: 'Flores',
-  },
-  {
-    id: 2,
-    name: 'Sakura',
-    real: '/gallery/sakura-foto.png',
-    sketch: '/gallery/sakura-risco.png',
-    category: 'Flores',
-  },
-  {
-    id: 3,
-    name: 'Rosa Azul',
-    real: '/gallery/rosa-azul-foto.png',
-    sketch: null,
-    category: 'Flores',
-  },
-  {
-    id: 4,
-    name: 'Arara Tropical',
-    real: '/gallery/araras-foto.png',
-    sketch: null,
-    category: 'Fauna',
-  },
-]
+import { supabase } from '../lib/supabase.jsx'
 
 export default function Galeria() {
+  const [plants, setPlants] = useState([])
+  const [loading, setLoading] = useState(true)
   const [selectedPlant, setSelectedPlant] = useState(null)
+
+  useEffect(() => {
+    supabase
+      .from('plantas')
+      .select('*')
+      .order('created_at', { ascending: false })
+      .then(({ data, error }) => {
+        if (!error && data) setPlants(data)
+        setLoading(false)
+      })
+  }, [])
   const [opacity, setOpacity] = useState(50)
   const [brightness, setBrightness] = useState(100)
   const [contrast, setContrast] = useState(100)
@@ -60,8 +43,31 @@ export default function Galeria() {
           </header>
 
           {/* Cards */}
+          {loading && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+              {[1, 2, 3].map(i => (
+                <div key={i} style={{
+                  background: '#fff', overflow: 'hidden',
+                  border: '1px solid #E5E2D9',
+                }}>
+                  <div className="skeleton" style={{ height: 360, width: '100%' }} />
+                  <div style={{
+                    padding: '14px 18px', display: 'flex',
+                    justifyContent: 'space-between', alignItems: 'center',
+                  }}>
+                    <div className="skeleton" style={{
+                      height: 18, width: 140, borderRadius: 4,
+                    }} />
+                    <div className="skeleton" style={{
+                      height: 10, width: 50, borderRadius: 4,
+                    }} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-            {gallery.map(plant => (
+            {plants.map(plant => (
               <div key={plant.id} onClick={() => setSelectedPlant(plant)} style={{
                 cursor: 'pointer', background: '#fff', overflow: 'hidden',
                 boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
