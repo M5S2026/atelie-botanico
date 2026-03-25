@@ -1,17 +1,25 @@
-import { useState, useEffect } from 'react'
-import { Plus, Trash2, Upload } from 'lucide-react'
+import { useState, useEffect, useRef } from 'react'
+import { Plus, Trash2, Upload, LogOut } from 'lucide-react'
 import { supabase } from '../lib/supabase.jsx'
+import { useAuth } from '../lib/auth.jsx'
+import { sanitizePlant, validateFile, safeErrorMessage } from '../lib/security.jsx'
 
 export default function PainelAdmin() {
+  const { user } = useAuth()
   const [plants, setPlants] = useState([])
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
+  const [error, setError] = useState('')
   const [newPlant, setNewPlant] = useState({
     name: '',
     category: 'Flores',
     real: '',
     sketch: '',
   })
+  const [realFile, setRealFile] = useState(null)
+  const [sketchFile, setSketchFile] = useState(null)
+  const realInputRef = useRef(null)
+  const sketchInputRef = useRef(null)
 
   useEffect(() => { fetchPlants() }, [])
 
@@ -24,20 +32,68 @@ export default function PainelAdmin() {
     setLoading(false)
   }
 
+  function handleFileSelect(file, type) {
+    setError('')
+    const result = validateFile(file)
+    if (!result.valid) {
+      setError(result.error)
+      return
+    }
+    if (type === 'real') setRealFile(file)
+    else setSketchFile(file)
+  }
+
+  async function uploadFile(file, folder) {
+    const ext = file.name.split('.').pop().toLowerCase()
+    const path = `${folder}/${Date.now()}.${ext}`
+    const { data, error } = await supabase.storage
+      .from('galeria')
+      .upload(path, file, { contentType: file.type })
+    if (error) return null
+    const { data: { publicUrl } } = supabase.storage
+      .from('galeria')
+      .getPublicUrl(data.path)
+    return publicUrl
+  }
+
   async function handleSubmit() {
-    if (!newPlant.name.trim()) return
+    setError('')
+    const clean = sanitizePlant(newPlant)
+    if (!clean.name) return
+
     setSaving(true)
-    const { error } = await supabase.from('plantas').insert([{
-      name: newPlant.name,
-      category: newPlant.category,
-      real: newPlant.real || null,
-      sketch: newPlant.sketch || null,
-    }])
-    if (error) {
-      alert('Erro ao salvar: ' + error.message)
-    } else {
-      setNewPlant({ name: '', category: 'Flores', real: '', sketch: '' })
-      await fetchPlants()
+    try {
+      let realUrl = clean.real || null
+      let sketchUrl = clean.sketch || null
+
+      if (realFile) {
+        realUrl = await uploadFile(realFile, 'fotos')
+        if (!realUrl) { setError(safeErrorMessage()); setSaving(false); return }
+      }
+      if (sketchFile) {
+        sketchUrl = await uploadFile(sketchFile, 'riscos')
+        if (!sketchUrl) { setError(safeErrorMessage()); setSaving(false); return }
+      }
+
+      const { error: dbError } = await supabase.from('plantas').insert([{
+        name: clean.name,
+        category: clean.category,
+        real: realUrl,
+        sketch: sketchUrl,
+      }])
+
+      if (dbError) {
+        setError(safeErrorMessage())
+      } else {
+        setNewPlant({ name: '', category: 'Flores', real: '', sketch: '' })
+        setRealFile(null)
+        setSketchFile(null)
+        if (realInputRef.current) realInputRef.current.value = ''
+        if (sketchInputRef.current) sketchInputRef.current.value = ''
+        await fetchPlants()
+      }
+    } catch {
+      setError(safeErrorMessage())
     }
     setSaving(false)
   }
@@ -45,6 +101,10 @@ export default function PainelAdmin() {
   async function handleDelete(id) {
     const { error } = await supabase.from('plantas').delete().eq('id', id)
     if (!error) setPlants(prev => prev.filter(p => p.id !== id))
+  }
+
+  async function handleLogout() {
+    await supabase.auth.signOut()
   }
 
   function handleField(field, value) {
@@ -59,19 +119,29 @@ export default function PainelAdmin() {
       <header style={{
         marginBottom: 24, paddingBottom: 16,
         borderBottom: '0.5px solid rgba(93,202,165,0.15)',
+        display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start',
       }}>
-        <h2 style={{
-          fontFamily: 'var(--font-display)', fontStyle: 'italic',
-          fontSize: 24, color: '#fff', marginBottom: 6,
+        <div>
+          <h2 style={{
+            fontFamily: 'var(--font-display)', fontStyle: 'italic',
+            fontSize: 24, color: '#fff', marginBottom: 6,
+          }}>
+            Gestao de Acervo
+          </h2>
+          <p style={{
+            fontSize: 10, letterSpacing: 3, textTransform: 'uppercase',
+            color: 'rgba(255,255,255,0.4)',
+          }}>
+            {user?.email}
+          </p>
+        </div>
+        <button onClick={handleLogout} style={{
+          background: 'rgba(255,255,255,0.06)', border: '1px solid var(--borda)',
+          borderRadius: 10, padding: '8px 12px', color: 'rgba(255,255,255,0.5)',
+          display: 'flex', alignItems: 'center', gap: 6, fontSize: 11, cursor: 'pointer',
         }}>
-          Gestao de Acervo
-        </h2>
-        <p style={{
-          fontSize: 10, letterSpacing: 3, textTransform: 'uppercase',
-          color: 'rgba(255,255,255,0.4)',
-        }}>
-          Adicione novas referencias botanicas
-        </p>
+          <LogOut size={14} /> Sair
+        </button>
       </header>
 
       <div style={{
@@ -133,35 +203,59 @@ export default function PainelAdmin() {
 
           {/* Upload zones */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-            <div style={{
-              border: '2px dashed var(--borda)', borderRadius: 16,
+            <label style={{
+              border: `2px dashed ${realFile ? 'var(--verde2)' : 'var(--borda)'}`, borderRadius: 16,
               padding: '24px 12px', textAlign: 'center', cursor: 'pointer',
-              background: 'rgba(15,110,86,0.06)',
+              background: realFile ? 'rgba(15,110,86,0.15)' : 'rgba(15,110,86,0.06)',
               transition: 'border-color 0.2s',
             }}>
-              <Upload size={22} color="rgba(255,255,255,0.35)" style={{ margin: '0 auto 8px' }} />
+              <input ref={realInputRef} type="file" accept=".jpg,.jpeg,.png"
+                onChange={e => handleFileSelect(e.target.files[0], 'real')}
+                style={{ display: 'none' }} />
+              <Upload size={22} color={realFile ? 'var(--verde3)' : 'rgba(255,255,255,0.35)'} style={{ margin: '0 auto 8px' }} />
               <span style={{
                 display: 'block', fontSize: 10, textTransform: 'uppercase',
-                letterSpacing: 2, color: 'rgba(255,255,255,0.4)',
+                letterSpacing: 2, color: realFile ? 'var(--verde3)' : 'rgba(255,255,255,0.4)',
               }}>
-                Subir Foto Real
+                {realFile ? realFile.name.slice(0, 18) : 'Subir Foto Real'}
               </span>
-            </div>
-            <div style={{
-              border: '2px dashed var(--borda)', borderRadius: 16,
+              <span style={{ fontSize: 9, color: 'rgba(255,255,255,0.25)', marginTop: 4, display: 'block' }}>
+                JPG/PNG, max 2MB
+              </span>
+            </label>
+            <label style={{
+              border: `2px dashed ${sketchFile ? 'var(--verde2)' : 'var(--borda)'}`, borderRadius: 16,
               padding: '24px 12px', textAlign: 'center', cursor: 'pointer',
-              background: 'rgba(15,110,86,0.06)',
+              background: sketchFile ? 'rgba(15,110,86,0.15)' : 'rgba(15,110,86,0.06)',
               transition: 'border-color 0.2s',
             }}>
-              <Upload size={22} color="rgba(255,255,255,0.35)" style={{ margin: '0 auto 8px' }} />
+              <input ref={sketchInputRef} type="file" accept=".jpg,.jpeg,.png"
+                onChange={e => handleFileSelect(e.target.files[0], 'sketch')}
+                style={{ display: 'none' }} />
+              <Upload size={22} color={sketchFile ? 'var(--verde3)' : 'rgba(255,255,255,0.35)'} style={{ margin: '0 auto 8px' }} />
               <span style={{
                 display: 'block', fontSize: 10, textTransform: 'uppercase',
-                letterSpacing: 2, color: 'rgba(255,255,255,0.4)',
+                letterSpacing: 2, color: sketchFile ? 'var(--verde3)' : 'rgba(255,255,255,0.4)',
               }}>
-                Subir Risco
+                {sketchFile ? sketchFile.name.slice(0, 18) : 'Subir Risco'}
               </span>
-            </div>
+              <span style={{ fontSize: 9, color: 'rgba(255,255,255,0.25)', marginTop: 4, display: 'block' }}>
+                JPG/PNG, max 2MB
+              </span>
+            </label>
           </div>
+
+          {/* Error message */}
+          {error && (
+            <div style={{
+              padding: '10px 14px', borderRadius: 10,
+              background: 'rgba(220,38,38,0.15)',
+              border: '1px solid rgba(220,38,38,0.3)',
+              fontSize: 12, color: '#fca5a5', textAlign: 'center',
+            }}>
+              {error}
+            </div>
+          )}
 
           {/* Submit */}
           <button onClick={handleSubmit} disabled={saving} style={{

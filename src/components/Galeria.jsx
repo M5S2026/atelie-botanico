@@ -162,7 +162,7 @@ export default function Galeria() {
         </div>
       </div>
 
-      {/* Área de Projeção */}
+      {/* Area de Projecao — Container Mestre 4:5 */}
       <div style={{
         flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center',
         overflow: 'hidden', padding: 12, position: 'relative',
@@ -170,22 +170,31 @@ export default function Galeria() {
         <div style={{
           position: 'relative', width: '100%', maxWidth: 800,
           aspectRatio: '4/5', background: '#111',
-          boxShadow: '0 16px 64px rgba(0,0,0,0.5)', overflow: 'hidden',
+          boxShadow: '0 16px 64px rgba(0,0,0,0.5)',
+          overflow: 'hidden',
           filter: `brightness(${brightness}%) contrast(${contrast}%)${isInverted ? ' invert(1)' : ''}`,
           pointerEvents: isLocked ? 'none' : 'auto',
         }}>
-          {/* Camada 1: Foto Real (Fundo) */}
-          <img src={selectedPlant.real} alt="Referência Real" style={{
-            position: 'absolute', inset: 0, width: '100%', height: '100%',
+          {/* Camada 1: Foto Real (Fundo) — alinhamento central absoluto */}
+          <img src={selectedPlant.real} alt="Referencia Real" style={{
+            position: 'absolute',
+            top: '50%', left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: '100%', height: '100%',
             objectFit: 'contain',
           }} />
 
-          {/* Camada 2: Risco (Sobreposição) */}
+          {/* Camada 2: Risco (Sobreposicao) — mesmo pivot central */}
           {selectedPlant.sketch && (
-            <img src={selectedPlant.sketch} alt="Risco Técnico" style={{
-              position: 'absolute', inset: 0, width: '100%', height: '100%',
-              objectFit: 'contain', mixBlendMode: 'multiply',
+            <img src={selectedPlant.sketch} alt="Risco Tecnico" style={{
+              position: 'absolute',
+              top: '50%', left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: '100%', height: '100%',
+              objectFit: 'contain',
+              mixBlendMode: 'multiply',
               opacity: opacity / 100,
+              transition: 'opacity 0.15s ease-out',
             }} />
           )}
         </div>

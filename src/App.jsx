@@ -8,11 +8,13 @@ import Projetor from './components/Projetor.jsx'
 import Simulador from './components/Simulador.jsx'
 import Planos from './components/Planos.jsx'
 import PainelAdmin from './components/PainelAdmin.jsx'
+import AdminLogin from './components/AdminLogin.jsx'
 import PremiumOverlay from './components/PremiumOverlay.jsx'
 import InstallPrompt from './components/InstallPrompt.jsx'
 import { PlanProvider } from './hooks/usePlan.jsx'
+import { AuthProvider, useAuth, isAdmin } from './lib/auth.jsx'
 
-const TABS = [
+const PUBLIC_TABS = [
   { id: 'home',       icon: '🌿', label: 'Início'     },
   { id: 'biblioteca', icon: '🖼',  label: 'Riscos'     },
   { id: 'estudio',    icon: '✏️',  label: 'Estúdio'    },
@@ -20,10 +22,25 @@ const TABS = [
   { id: 'projetor',   icon: '📱',  label: 'Projetor'   },
   { id: 'simulador',  icon: '🎨',  label: 'Parede'     },
   { id: 'planos',     icon: '⭐',  label: 'Planos'     },
-  { id: 'admin',      icon: '🔧',  label: 'Admin'      },
 ]
 
+const ADMIN_TAB = { id: 'admin', icon: '🔧', label: 'Admin' }
+
 export default function App() {
+  return (
+    <AuthProvider>
+      <PlanProvider>
+        <AppContent />
+      </PlanProvider>
+    </AuthProvider>
+  )
+}
+
+function AppContent() {
+  const { user } = useAuth()
+  const showAdmin = isAdmin(user)
+  const TABS = showAdmin ? [...PUBLIC_TABS, ADMIN_TAB] : PUBLIC_TABS
+
   const [tab, setTab] = useState('home')
   const [selectedRisco, setSelectedRisco] = useState(null)
   const [selectedRef, setSelectedRef] = useState(null)
@@ -48,7 +65,6 @@ export default function App() {
   }
 
   return (
-    <PlanProvider>
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <main style={{ flex: 1, overflow: 'hidden' }}>
         {tab === 'home'        && <Galeria />}
@@ -58,7 +74,7 @@ export default function App() {
         {tab === 'projetor'    && <Projetor risco={selectedRisco} referencia={selectedRef} />}
         {tab === 'simulador'   && <Simulador />}
         {tab === 'planos'      && <Planos onClose={() => setTab('home')} />}
-        {tab === 'admin'       && <PainelAdmin />}
+        {tab === 'admin'       && (showAdmin ? <PainelAdmin /> : <AdminLogin onBack={() => setTab('home')} />)}
       </main>
 
       <PremiumOverlay isOpen={showPremium} onClose={() => setShowPremium(false)} />
@@ -90,6 +106,5 @@ export default function App() {
         ))}
       </nav>
     </div>
-    </PlanProvider>
   )
 }
